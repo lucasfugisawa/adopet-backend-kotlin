@@ -1,0 +1,13 @@
+spring:
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    generate-ddl: true
+    hibernate:
+      ddl-auto: update
+  datasource:
+    password: adopet-password
+    username: adopet
+    url: jdbc:mysql://localhost:3306/adopet?ssl-mode=REQUIRED
+  sql:
+    init:
+      mode: always
