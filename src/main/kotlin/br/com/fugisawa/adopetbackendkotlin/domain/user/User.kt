@@ -11,7 +11,8 @@ class User(
     val id: Long? = null,
 
     var email: String,
-    val name: String,
+    var name: String,
     var password: String,
     var about: String? = null,
+    var enabled: Boolean,
 )
