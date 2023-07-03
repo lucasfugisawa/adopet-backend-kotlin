@@ -17,8 +17,7 @@ class Pet(
     var state: String,
 
     @ManyToOne
-    var owner: User,
+    var owner: User?,
 
     var profilePictureUrl: String,
-) {
-}
+)

@@ -1,6 +1,7 @@
 package br.com.fugisawa.adopetbackendkotlin.controller
 
 import br.com.fugisawa.adopetbackendkotlin.domain.pet.Pet
+import br.com.fugisawa.adopetbackendkotlin.domain.pet.dto.PetCreate
 import br.com.fugisawa.adopetbackendkotlin.service.PetService
 import org.springframework.http.HttpStatus
 import org.springframework.http.ResponseEntity
@@ -21,7 +22,7 @@ class PetController(val petService: PetService) {
 
     @PostMapping
     @ResponseStatus(HttpStatus.CREATED)
-    fun createPet(@RequestBody pet: Pet) = petService.create(pet)
+    fun createPet(@RequestBody pet: PetCreate) = petService.create(pet)
 
     @PutMapping
     @ResponseStatus(HttpStatus.NO_CONTENT)
